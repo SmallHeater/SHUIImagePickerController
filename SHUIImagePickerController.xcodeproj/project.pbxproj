@@ -1,0 +1,726 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		62DE4AE21F9F1CC50086CE06 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DE4AE11F9F1CC50086CE06 /* main.m */; };
+		62DE4AE51F9F1CC50086CE06 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DE4AE41F9F1CC50086CE06 /* AppDelegate.m */; };
+		62DE4AE81F9F1CC50086CE06 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DE4AE71F9F1CC50086CE06 /* ViewController.m */; };
+		62DE4AEB1F9F1CC50086CE06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62DE4AE91F9F1CC50086CE06 /* Main.storyboard */; };
+		62DE4AED1F9F1CC50086CE06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62DE4AEC1F9F1CC50086CE06 /* Assets.xcassets */; };
+		62DE4AF01F9F1CC50086CE06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62DE4AEE1F9F1CC50086CE06 /* LaunchScreen.storyboard */; };
+		62DE4AFB1F9F1CC50086CE06 /* SHUIImagePickerControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DE4AFA1F9F1CC50086CE06 /* SHUIImagePickerControllerTests.m */; };
+		62DE4B061F9F1CC50086CE06 /* SHUIImagePickerControllerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DE4B051F9F1CC50086CE06 /* SHUIImagePickerControllerUITests.m */; };
+		62DE4B261F9F1D7A0086CE06 /* SHUIImagePickerControllerLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DE4B221F9F1D7A0086CE06 /* SHUIImagePickerControllerLibrary.m */; };
+		62DE4B291F9F1DA30086CE06 /* SHUIImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DE4B281F9F1DA30086CE06 /* SHUIImagePickerViewController.m */; };
+		62DE4B301F9F23A80086CE06 /* UIColor+Translate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DE4B2F1F9F23A80086CE06 /* UIColor+Translate.m */; };
+		62DE4B341F9F25E90086CE06 /* SHUIImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DE4B331F9F25E90086CE06 /* SHUIImagePickerController.m */; };
+		62DE4B381F9F27CD0086CE06 /* SHCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DE4B371F9F27CD0086CE06 /* SHCollectionViewCell.m */; };
+		62DE4B3B1F9F29BC0086CE06 /* SHAssetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DE4B3A1F9F29BC0086CE06 /* SHAssetModel.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		62DE4AF71F9F1CC50086CE06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 62DE4AD51F9F1CC50086CE06 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 62DE4ADC1F9F1CC50086CE06;
+			remoteInfo = SHUIImagePickerController;
+		};
+		62DE4B021F9F1CC50086CE06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 62DE4AD51F9F1CC50086CE06 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 62DE4ADC1F9F1CC50086CE06;
+			remoteInfo = SHUIImagePickerController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		62DE4B151F9F1CF10086CE06 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		62DE4ADD1F9F1CC50086CE06 /* SHUIImagePickerController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SHUIImagePickerController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		62DE4AE11F9F1CC50086CE06 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		62DE4AE31F9F1CC50086CE06 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		62DE4AE41F9F1CC50086CE06 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		62DE4AE61F9F1CC50086CE06 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		62DE4AE71F9F1CC50086CE06 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		62DE4AEA1F9F1CC50086CE06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		62DE4AEC1F9F1CC50086CE06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		62DE4AEF1F9F1CC50086CE06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		62DE4AF11F9F1CC50086CE06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62DE4AF61F9F1CC50086CE06 /* SHUIImagePickerControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SHUIImagePickerControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		62DE4AFA1F9F1CC50086CE06 /* SHUIImagePickerControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHUIImagePickerControllerTests.m; sourceTree = "<group>"; };
+		62DE4AFC1F9F1CC50086CE06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62DE4B011F9F1CC50086CE06 /* SHUIImagePickerControllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SHUIImagePickerControllerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		62DE4B051F9F1CC50086CE06 /* SHUIImagePickerControllerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHUIImagePickerControllerUITests.m; sourceTree = "<group>"; };
+		62DE4B071F9F1CC50086CE06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62DE4B171F9F1CF10086CE06 /* libSHUIImagePickerControllerLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSHUIImagePickerControllerLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		62DE4B211F9F1D7A0086CE06 /* SHUIImagePickerControllerLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHUIImagePickerControllerLibrary.h; sourceTree = "<group>"; };
+		62DE4B221F9F1D7A0086CE06 /* SHUIImagePickerControllerLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHUIImagePickerControllerLibrary.m; sourceTree = "<group>"; };
+		62DE4B271F9F1DA30086CE06 /* SHUIImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHUIImagePickerViewController.h; sourceTree = "<group>"; };
+		62DE4B281F9F1DA30086CE06 /* SHUIImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHUIImagePickerViewController.m; sourceTree = "<group>"; };
+		62DE4B2C1F9F20FE0086CE06 /* SHUIImagePickerControllerLibrary.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHUIImagePickerControllerLibrary.pch; sourceTree = "<group>"; };
+		62DE4B2E1F9F23A80086CE06 /* UIColor+Translate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Translate.h"; sourceTree = "<group>"; };
+		62DE4B2F1F9F23A80086CE06 /* UIColor+Translate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Translate.m"; sourceTree = "<group>"; };
+		62DE4B321F9F25E90086CE06 /* SHUIImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHUIImagePickerController.h; sourceTree = "<group>"; };
+		62DE4B331F9F25E90086CE06 /* SHUIImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHUIImagePickerController.m; sourceTree = "<group>"; };
+		62DE4B361F9F27CD0086CE06 /* SHCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHCollectionViewCell.h; sourceTree = "<group>"; };
+		62DE4B371F9F27CD0086CE06 /* SHCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHCollectionViewCell.m; sourceTree = "<group>"; };
+		62DE4B391F9F29BC0086CE06 /* SHAssetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHAssetModel.h; sourceTree = "<group>"; };
+		62DE4B3A1F9F29BC0086CE06 /* SHAssetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHAssetModel.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		62DE4ADA1F9F1CC50086CE06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62DE4AF31F9F1CC50086CE06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62DE4AFE1F9F1CC50086CE06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62DE4B141F9F1CF10086CE06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		62DE4AD41F9F1CC50086CE06 = {
+			isa = PBXGroup;
+			children = (
+				62DE4ADF1F9F1CC50086CE06 /* SHUIImagePickerController */,
+				62DE4AF91F9F1CC50086CE06 /* SHUIImagePickerControllerTests */,
+				62DE4B041F9F1CC50086CE06 /* SHUIImagePickerControllerUITests */,
+				62DE4B181F9F1CF10086CE06 /* SHUIImagePickerControllerLibrary */,
+				62DE4ADE1F9F1CC50086CE06 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		62DE4ADE1F9F1CC50086CE06 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				62DE4ADD1F9F1CC50086CE06 /* SHUIImagePickerController.app */,
+				62DE4AF61F9F1CC50086CE06 /* SHUIImagePickerControllerTests.xctest */,
+				62DE4B011F9F1CC50086CE06 /* SHUIImagePickerControllerUITests.xctest */,
+				62DE4B171F9F1CF10086CE06 /* libSHUIImagePickerControllerLibrary.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		62DE4ADF1F9F1CC50086CE06 /* SHUIImagePickerController */ = {
+			isa = PBXGroup;
+			children = (
+				62DE4AE31F9F1CC50086CE06 /* AppDelegate.h */,
+				62DE4AE41F9F1CC50086CE06 /* AppDelegate.m */,
+				62DE4AE61F9F1CC50086CE06 /* ViewController.h */,
+				62DE4AE71F9F1CC50086CE06 /* ViewController.m */,
+				62DE4AE91F9F1CC50086CE06 /* Main.storyboard */,
+				62DE4AEC1F9F1CC50086CE06 /* Assets.xcassets */,
+				62DE4AEE1F9F1CC50086CE06 /* LaunchScreen.storyboard */,
+				62DE4AF11F9F1CC50086CE06 /* Info.plist */,
+				62DE4AE01F9F1CC50086CE06 /* Supporting Files */,
+			);
+			path = SHUIImagePickerController;
+			sourceTree = "<group>";
+		};
+		62DE4AE01F9F1CC50086CE06 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				62DE4AE11F9F1CC50086CE06 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		62DE4AF91F9F1CC50086CE06 /* SHUIImagePickerControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				62DE4AFA1F9F1CC50086CE06 /* SHUIImagePickerControllerTests.m */,
+				62DE4AFC1F9F1CC50086CE06 /* Info.plist */,
+			);
+			path = SHUIImagePickerControllerTests;
+			sourceTree = "<group>";
+		};
+		62DE4B041F9F1CC50086CE06 /* SHUIImagePickerControllerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				62DE4B051F9F1CC50086CE06 /* SHUIImagePickerControllerUITests.m */,
+				62DE4B071F9F1CC50086CE06 /* Info.plist */,
+			);
+			path = SHUIImagePickerControllerUITests;
+			sourceTree = "<group>";
+		};
+		62DE4B181F9F1CF10086CE06 /* SHUIImagePickerControllerLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				62DE4B351F9F27A30086CE06 /* Cell */,
+				62DE4B311F9F25C40086CE06 /* Controller */,
+				62DE4B2D1F9F23A80086CE06 /* Category */,
+				62DE4B201F9F1D7A0086CE06 /* Interface */,
+				62DE4B231F9F1D7A0086CE06 /* Model */,
+				62DE4B241F9F1D7A0086CE06 /* UIView */,
+				62DE4B251F9F1D7A0086CE06 /* UIViewController */,
+			);
+			path = SHUIImagePickerControllerLibrary;
+			sourceTree = "<group>";
+		};
+		62DE4B201F9F1D7A0086CE06 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				62DE4B211F9F1D7A0086CE06 /* SHUIImagePickerControllerLibrary.h */,
+				62DE4B221F9F1D7A0086CE06 /* SHUIImagePickerControllerLibrary.m */,
+				62DE4B2C1F9F20FE0086CE06 /* SHUIImagePickerControllerLibrary.pch */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		62DE4B231F9F1D7A0086CE06 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				62DE4B391F9F29BC0086CE06 /* SHAssetModel.h */,
+				62DE4B3A1F9F29BC0086CE06 /* SHAssetModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		62DE4B241F9F1D7A0086CE06 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		62DE4B251F9F1D7A0086CE06 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				62DE4B271F9F1DA30086CE06 /* SHUIImagePickerViewController.h */,
+				62DE4B281F9F1DA30086CE06 /* SHUIImagePickerViewController.m */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		62DE4B2D1F9F23A80086CE06 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				62DE4B2E1F9F23A80086CE06 /* UIColor+Translate.h */,
+				62DE4B2F1F9F23A80086CE06 /* UIColor+Translate.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		62DE4B311F9F25C40086CE06 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				62DE4B321F9F25E90086CE06 /* SHUIImagePickerController.h */,
+				62DE4B331F9F25E90086CE06 /* SHUIImagePickerController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		62DE4B351F9F27A30086CE06 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				62DE4B361F9F27CD0086CE06 /* SHCollectionViewCell.h */,
+				62DE4B371F9F27CD0086CE06 /* SHCollectionViewCell.m */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		62DE4ADC1F9F1CC50086CE06 /* SHUIImagePickerController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62DE4B0A1F9F1CC50086CE06 /* Build configuration list for PBXNativeTarget "SHUIImagePickerController" */;
+			buildPhases = (
+				62DE4AD91F9F1CC50086CE06 /* Sources */,
+				62DE4ADA1F9F1CC50086CE06 /* Frameworks */,
+				62DE4ADB1F9F1CC50086CE06 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SHUIImagePickerController;
+			productName = SHUIImagePickerController;
+			productReference = 62DE4ADD1F9F1CC50086CE06 /* SHUIImagePickerController.app */;
+			productType = "com.apple.product-type.application";
+		};
+		62DE4AF51F9F1CC50086CE06 /* SHUIImagePickerControllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62DE4B0D1F9F1CC50086CE06 /* Build configuration list for PBXNativeTarget "SHUIImagePickerControllerTests" */;
+			buildPhases = (
+				62DE4AF21F9F1CC50086CE06 /* Sources */,
+				62DE4AF31F9F1CC50086CE06 /* Frameworks */,
+				62DE4AF41F9F1CC50086CE06 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				62DE4AF81F9F1CC50086CE06 /* PBXTargetDependency */,
+			);
+			name = SHUIImagePickerControllerTests;
+			productName = SHUIImagePickerControllerTests;
+			productReference = 62DE4AF61F9F1CC50086CE06 /* SHUIImagePickerControllerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		62DE4B001F9F1CC50086CE06 /* SHUIImagePickerControllerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62DE4B101F9F1CC50086CE06 /* Build configuration list for PBXNativeTarget "SHUIImagePickerControllerUITests" */;
+			buildPhases = (
+				62DE4AFD1F9F1CC50086CE06 /* Sources */,
+				62DE4AFE1F9F1CC50086CE06 /* Frameworks */,
+				62DE4AFF1F9F1CC50086CE06 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				62DE4B031F9F1CC50086CE06 /* PBXTargetDependency */,
+			);
+			name = SHUIImagePickerControllerUITests;
+			productName = SHUIImagePickerControllerUITests;
+			productReference = 62DE4B011F9F1CC50086CE06 /* SHUIImagePickerControllerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		62DE4B161F9F1CF10086CE06 /* SHUIImagePickerControllerLibrary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62DE4B1D1F9F1CF20086CE06 /* Build configuration list for PBXNativeTarget "SHUIImagePickerControllerLibrary" */;
+			buildPhases = (
+				62DE4B131F9F1CF10086CE06 /* Sources */,
+				62DE4B141F9F1CF10086CE06 /* Frameworks */,
+				62DE4B151F9F1CF10086CE06 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SHUIImagePickerControllerLibrary;
+			productName = SHUIImagePickerControllerLibrary;
+			productReference = 62DE4B171F9F1CF10086CE06 /* libSHUIImagePickerControllerLibrary.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		62DE4AD51F9F1CC50086CE06 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = xianjunwang;
+				TargetAttributes = {
+					62DE4ADC1F9F1CC50086CE06 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = TDT34TC7ER;
+						ProvisioningStyle = Automatic;
+					};
+					62DE4AF51F9F1CC50086CE06 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = TDT34TC7ER;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 62DE4ADC1F9F1CC50086CE06;
+					};
+					62DE4B001F9F1CC50086CE06 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = TDT34TC7ER;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 62DE4ADC1F9F1CC50086CE06;
+					};
+					62DE4B161F9F1CF10086CE06 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = TDT34TC7ER;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 62DE4AD81F9F1CC50086CE06 /* Build configuration list for PBXProject "SHUIImagePickerController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 62DE4AD41F9F1CC50086CE06;
+			productRefGroup = 62DE4ADE1F9F1CC50086CE06 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				62DE4ADC1F9F1CC50086CE06 /* SHUIImagePickerController */,
+				62DE4AF51F9F1CC50086CE06 /* SHUIImagePickerControllerTests */,
+				62DE4B001F9F1CC50086CE06 /* SHUIImagePickerControllerUITests */,
+				62DE4B161F9F1CF10086CE06 /* SHUIImagePickerControllerLibrary */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		62DE4ADB1F9F1CC50086CE06 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62DE4AF01F9F1CC50086CE06 /* LaunchScreen.storyboard in Resources */,
+				62DE4AED1F9F1CC50086CE06 /* Assets.xcassets in Resources */,
+				62DE4AEB1F9F1CC50086CE06 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62DE4AF41F9F1CC50086CE06 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62DE4AFF1F9F1CC50086CE06 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		62DE4AD91F9F1CC50086CE06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62DE4AE81F9F1CC50086CE06 /* ViewController.m in Sources */,
+				62DE4AE51F9F1CC50086CE06 /* AppDelegate.m in Sources */,
+				62DE4AE21F9F1CC50086CE06 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62DE4AF21F9F1CC50086CE06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62DE4AFB1F9F1CC50086CE06 /* SHUIImagePickerControllerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62DE4AFD1F9F1CC50086CE06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62DE4B061F9F1CC50086CE06 /* SHUIImagePickerControllerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62DE4B131F9F1CF10086CE06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				62DE4B381F9F27CD0086CE06 /* SHCollectionViewCell.m in Sources */,
+				62DE4B341F9F25E90086CE06 /* SHUIImagePickerController.m in Sources */,
+				62DE4B301F9F23A80086CE06 /* UIColor+Translate.m in Sources */,
+				62DE4B261F9F1D7A0086CE06 /* SHUIImagePickerControllerLibrary.m in Sources */,
+				62DE4B291F9F1DA30086CE06 /* SHUIImagePickerViewController.m in Sources */,
+				62DE4B3B1F9F29BC0086CE06 /* SHAssetModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		62DE4AF81F9F1CC50086CE06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 62DE4ADC1F9F1CC50086CE06 /* SHUIImagePickerController */;
+			targetProxy = 62DE4AF71F9F1CC50086CE06 /* PBXContainerItemProxy */;
+		};
+		62DE4B031F9F1CC50086CE06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 62DE4ADC1F9F1CC50086CE06 /* SHUIImagePickerController */;
+			targetProxy = 62DE4B021F9F1CC50086CE06 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		62DE4AE91F9F1CC50086CE06 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				62DE4AEA1F9F1CC50086CE06 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		62DE4AEE1F9F1CC50086CE06 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				62DE4AEF1F9F1CC50086CE06 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		62DE4B081F9F1CC50086CE06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		62DE4B091F9F1CC50086CE06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		62DE4B0B1F9F1CC50086CE06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TDT34TC7ER;
+				GCC_PREFIX_HEADER = "$(PROJECR_DIR)/Interface/SHUIImagePickerControllerLibrary.pch";
+				INFOPLIST_FILE = SHUIImagePickerController/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.smallHeat.SHUIImagePickerController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		62DE4B0C1F9F1CC50086CE06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TDT34TC7ER;
+				GCC_PREFIX_HEADER = "$(PROJECR_DIR)/Interface/SHUIImagePickerControllerLibrary.pch";
+				INFOPLIST_FILE = SHUIImagePickerController/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.smallHeat.SHUIImagePickerController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		62DE4B0E1F9F1CC50086CE06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = TDT34TC7ER;
+				INFOPLIST_FILE = SHUIImagePickerControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.smallHeat.SHUIImagePickerControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SHUIImagePickerController.app/SHUIImagePickerController";
+			};
+			name = Debug;
+		};
+		62DE4B0F1F9F1CC50086CE06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = TDT34TC7ER;
+				INFOPLIST_FILE = SHUIImagePickerControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.smallHeat.SHUIImagePickerControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SHUIImagePickerController.app/SHUIImagePickerController";
+			};
+			name = Release;
+		};
+		62DE4B111F9F1CC50086CE06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = TDT34TC7ER;
+				INFOPLIST_FILE = SHUIImagePickerControllerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.smallHeat.SHUIImagePickerControllerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SHUIImagePickerController;
+			};
+			name = Debug;
+		};
+		62DE4B121F9F1CC50086CE06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = TDT34TC7ER;
+				INFOPLIST_FILE = SHUIImagePickerControllerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.smallHeat.SHUIImagePickerControllerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SHUIImagePickerController;
+			};
+			name = Release;
+		};
+		62DE4B1E1F9F1CF20086CE06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = TDT34TC7ER;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SHUIImagePickerControllerLibrary/Interface/SHUIImagePickerControllerLibrary.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		62DE4B1F1F9F1CF20086CE06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = TDT34TC7ER;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SHUIImagePickerControllerLibrary/Interface/SHUIImagePickerControllerLibrary.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		62DE4AD81F9F1CC50086CE06 /* Build configuration list for PBXProject "SHUIImagePickerController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62DE4B081F9F1CC50086CE06 /* Debug */,
+				62DE4B091F9F1CC50086CE06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		62DE4B0A1F9F1CC50086CE06 /* Build configuration list for PBXNativeTarget "SHUIImagePickerController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62DE4B0B1F9F1CC50086CE06 /* Debug */,
+				62DE4B0C1F9F1CC50086CE06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		62DE4B0D1F9F1CC50086CE06 /* Build configuration list for PBXNativeTarget "SHUIImagePickerControllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62DE4B0E1F9F1CC50086CE06 /* Debug */,
+				62DE4B0F1F9F1CC50086CE06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		62DE4B101F9F1CC50086CE06 /* Build configuration list for PBXNativeTarget "SHUIImagePickerControllerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62DE4B111F9F1CC50086CE06 /* Debug */,
+				62DE4B121F9F1CC50086CE06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		62DE4B1D1F9F1CF20086CE06 /* Build configuration list for PBXNativeTarget "SHUIImagePickerControllerLibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62DE4B1E1F9F1CF20086CE06 /* Debug */,
+				62DE4B1F1F9F1CF20086CE06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 62DE4AD51F9F1CC50086CE06 /* Project object */;
+}

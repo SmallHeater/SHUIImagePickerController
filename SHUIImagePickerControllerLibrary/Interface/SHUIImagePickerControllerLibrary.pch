@@ -1,0 +1,22 @@
+//
+//  SHUIImagePickerControllerLibrary.pch
+//  SHUIImagePickerController
+//
+//  Created by xianjunwang on 2017/10/24.
+//  Copyright © 2017年 xianjunwang. All rights reserved.
+//
+
+#ifndef SHUIImagePickerControllerLibrary_pch
+#define SHUIImagePickerControllerLibrary_pch
+
+
+#import "UIColor+Translate.h"
+
+#define SCREENWIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREENHEIGHT [UIScreen mainScreen].bounds.size.height
+
+
+#define Color_FFFFFF  [UIColor colorFromHexRGB:@"FFFFFF"]
+
+
+#endif /* SHUIImagePickerControllerLibrary_pch */
