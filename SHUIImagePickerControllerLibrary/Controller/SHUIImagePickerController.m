@@ -48,6 +48,7 @@
         if (allPhotosResult.count == weakSelf.shAssetModelArray.count) {
             
             result(weakSelf.shAssetModelArray);
+            [weakSelf.shAssetModelArray removeAllObjects];
         }
     }];
     
