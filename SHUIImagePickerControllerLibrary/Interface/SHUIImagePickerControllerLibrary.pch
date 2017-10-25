@@ -17,6 +17,6 @@
 
 
 #define Color_FFFFFF  [UIColor colorFromHexRGB:@"FFFFFF"]
-
+#define Color_87BA4B  [UIColor colorFromHexRGB:@"87BA4B"]
 
 #endif /* SHUIImagePickerControllerLibrary_pch */

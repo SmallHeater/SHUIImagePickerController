@@ -14,6 +14,11 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>SHUIImagePickerControllerLibrarySource.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -33,6 +38,11 @@
 			<true/>
 		</dict>
 		<key>62DE4B161F9F1CF10086CE06</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>62DE4B981FA09D590086CE06</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -8,7 +8,9 @@
 
 #import "SHUIImagePickerViewController.h"
 #import "SHCollectionViewCell.h"
-
+#import "SHUIImagePickerController.h"
+#import "SHCollectionViewCell.h"
+#import "SHAssetModel.h"
 
 @interface SHUIImagePickerViewController ()<UICollectionViewDelegate, UICollectionViewDataSource>
 //自定义导航条
@@ -20,6 +22,8 @@
 //完成按钮
 @property (nonatomic,strong) UIButton * finishBtn;
 @property (nonatomic,retain) UICollectionView *collectionView;
+//存储模型的数组
+@property (nonatomic,strong) NSMutableArray<SHAssetModel *> * dataArray;
 @end
 
 @implementation SHUIImagePickerViewController
@@ -28,7 +32,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    
+    [self.view addSubview:self.shNavigationBar];
+    [self.view addSubview:self.collectionView];
+    
+    [[SHUIImagePickerController sharedManager] loadAllPhoto:^(NSMutableArray<SHAssetModel *> *arr) {
+        
+        [self.dataArray addObjectsFromArray:arr];
+        [self.collectionView reloadData];
+    }];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -36,8 +49,6 @@
     [super viewWillAppear:animated];
     //使用自定义导航条
     self.navigationController.navigationBarHidden = YES;
-    
-    
     
 }
 
@@ -48,13 +59,45 @@
 
 #pragma mark  ----  代理
 
+#pragma mark  ----  UICollectionViewDelegate
 
+#pragma mark  ----  UICollectionViewDataSource
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return self.dataArray.count;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    SHCollectionViewCell *cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"SHCollectionViewCell" forIndexPath:indexPath];
+    
+    SHAssetModel * model = nil;
+    if (indexPath.row < self.dataArray.count) {
+        model = [self.dataArray objectAtIndex:indexPath.row];
+    }
+    
+    cell.imageView.image = model.thumbnails;
+    [cell.selectBtn setSelected:model.selected];
+    
+    return cell;
+}
 
 #pragma mark  ----  自定义函数
 
 //返回按钮的响应
 -(void)backBtnClicked:(UIButton *)backBtn{
 
+    if (self.navigationController) {
+        if (self.navigationController.viewControllers.count == 1) {
+            [self.navigationController dismissViewControllerAnimated:NO completion:nil];
+        }else{
+            [self.navigationController popViewControllerAnimated:YES];
+        }
+    }else{
+        [self dismissViewControllerAnimated:NO completion:nil];
+    }
 }
 
 //完成按钮的响应
@@ -62,13 +105,20 @@
 
 }
 
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    CGFloat width = (SCREENWIDTH - 10.0 * 5)/4.0;
+    return CGSizeMake(width, width);
+}
 #pragma mark  ----  懒加载
 
 -(UIView *)shNavigationBar{
 
     if (!_shNavigationBar) {
         
-        _shNavigationBar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT)];
+        _shNavigationBar = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREENWIDTH, 64)];
+        _shNavigationBar.backgroundColor = Color_87BA4B;
         [_shNavigationBar addSubview:self.backBtn];
         [_shNavigationBar addSubview:self.titleLabel];
         [_shNavigationBar addSubview:self.finishBtn];
@@ -77,11 +127,14 @@
 }
 
 -(UIButton *)backBtn{
+    
     if (!_backBtn) {
+        
         _backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [_backBtn setFrame:CGRectMake(0, 20, 44, 44)];
         _backBtn.contentEdgeInsets = UIEdgeInsetsMake(11, 11, 11, 11);
-        [_backBtn setImage:[UIImage imageNamed:@"JHLivePlayBundle.bundle/fanhui_w.tiff"] forState:UIControlStateNormal];
+        UIImage * image = [UIImage imageNamed:@"SHUIImagePickerControllerLibrarySource.bundle/fanhui_w.tiff"];
+        [_backBtn setImage:[UIImage imageNamed:@"SHUIImagePickerControllerLibrarySource.bundle/fanhui_w.tiff"] forState:UIControlStateNormal];
         [_backBtn addTarget:self action:@selector(backBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _backBtn;
@@ -125,6 +178,15 @@
         [_collectionView registerClass:[SHCollectionViewCell class] forCellWithReuseIdentifier:@"SHCollectionViewCell"];
     }
     return _collectionView;
+}
+
+-(NSMutableArray *)dataArray{
+
+    if (!_dataArray) {
+        
+        _dataArray = [[NSMutableArray alloc] init];
+    }
+    return _dataArray;
 }
 
 @end

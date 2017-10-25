@@ -7,6 +7,8 @@
 //  接口类
 
 #import <Foundation/Foundation.h>
+#import "SHUIImagePickerViewController.h"
+
 
 @interface SHUIImagePickerControllerLibrary : NSObject
 
