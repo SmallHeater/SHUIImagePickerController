@@ -35,6 +35,7 @@
 
 - (void)loadAllPhoto:(void(^)(NSMutableArray<SHAssetModel *> *arr))result
 {
+    [self.shAssetModelArray removeAllObjects];
     __weak __typeof(self)weakSelf = self;
     PHFetchOptions *allPhotosOptions = [PHFetchOptions new];
     allPhotosOptions.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:NO]]; //按照时间倒叙排列

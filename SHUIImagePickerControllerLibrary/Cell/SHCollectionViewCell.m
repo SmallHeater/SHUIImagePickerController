@@ -23,6 +23,8 @@
     return self;
 }
 
+
+
 #pragma mark  ----  懒加载
 -(UIImageView *)imageView{
 
@@ -42,9 +44,8 @@
         
         _selectBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         _selectBtn.frame = CGRectMake(63, 4, 20, 20);
-        [_selectBtn setImage:[UIImage imageNamed:@"JHLivePlayBundle.bundle/noSelected.tiff"] forState:UIControlStateNormal];
-        [_selectBtn setImage:[UIImage imageNamed:@"JHLivePlayBundle.bundle/selected.tiff"] forState:UIControlStateSelected];
-        [_selectBtn addTarget:self action:@selector(selectBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
+        [_selectBtn setImage:[UIImage imageNamed:@"SHUIImagePickerControllerLibrarySource.bundle/noSelected.tiff"] forState:UIControlStateNormal];
+        [_selectBtn setImage:[UIImage imageNamed:@"SHUIImagePickerControllerLibrarySource.bundle/selected.tiff"] forState:UIControlStateSelected];
     }
     return _selectBtn;
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0830"
+   LastUpgradeVersion = "0900"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "62DE4ADC1F9F1CC50086CE06"
-               BuildableName = "SHUIImagePickerController.app"
-               BlueprintName = "SHUIImagePickerController"
+               BlueprintIdentifier = "62DE4B981FA09D590086CE06"
+               BuildableName = "SHUIImagePickerControllerLibrarySource.bundle"
+               BlueprintName = "SHUIImagePickerControllerLibrarySource"
                ReferencedContainer = "container:SHUIImagePickerController.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -29,36 +29,7 @@
       language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "62DE4AF51F9F1CC50086CE06"
-               BuildableName = "SHUIImagePickerControllerTests.xctest"
-               BlueprintName = "SHUIImagePickerControllerTests"
-               ReferencedContainer = "container:SHUIImagePickerController.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "62DE4B001F9F1CC50086CE06"
-               BuildableName = "SHUIImagePickerControllerUITests.xctest"
-               BlueprintName = "SHUIImagePickerControllerUITests"
-               ReferencedContainer = "container:SHUIImagePickerController.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "62DE4ADC1F9F1CC50086CE06"
-            BuildableName = "SHUIImagePickerController.app"
-            BlueprintName = "SHUIImagePickerController"
-            ReferencedContainer = "container:SHUIImagePickerController.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -73,16 +44,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "62DE4ADC1F9F1CC50086CE06"
-            BuildableName = "SHUIImagePickerController.app"
-            BlueprintName = "SHUIImagePickerController"
+            BlueprintIdentifier = "62DE4B981FA09D590086CE06"
+            BuildableName = "SHUIImagePickerControllerLibrarySource.bundle"
+            BlueprintName = "SHUIImagePickerControllerLibrarySource"
             ReferencedContainer = "container:SHUIImagePickerController.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -92,16 +62,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "62DE4ADC1F9F1CC50086CE06"
-            BuildableName = "SHUIImagePickerController.app"
-            BlueprintName = "SHUIImagePickerController"
+            BlueprintIdentifier = "62DE4B981FA09D590086CE06"
+            BuildableName = "SHUIImagePickerControllerLibrarySource.bundle"
+            BlueprintName = "SHUIImagePickerControllerLibrarySource"
             ReferencedContainer = "container:SHUIImagePickerController.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

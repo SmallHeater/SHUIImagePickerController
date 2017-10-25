@@ -16,4 +16,6 @@
 
 //返回包含所有模型的数组
 - (void)loadAllPhoto:(void(^)(NSMutableArray<SHAssetModel *> *arr))result;
+
+
 @end

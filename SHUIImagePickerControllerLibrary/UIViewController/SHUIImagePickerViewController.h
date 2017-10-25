@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class SHAssetModel;
+
+typedef void(^resultBlock)(NSMutableArray<SHAssetModel *> * selectModelArray);
+
 @interface SHUIImagePickerViewController : UIViewController
+
+@property (nonatomic,weak) resultBlock block;
 
 @end

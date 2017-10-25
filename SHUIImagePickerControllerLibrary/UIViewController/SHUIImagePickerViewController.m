@@ -12,6 +12,9 @@
 #import "SHCollectionViewCell.h"
 #import "SHAssetModel.h"
 
+#define CELLSELECTBTNBASETAG  1010
+
+
 @interface SHUIImagePickerViewController ()<UICollectionViewDelegate, UICollectionViewDataSource>
 //自定义导航条
 @property (nonatomic,strong) UIView * shNavigationBar;
@@ -57,6 +60,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)dealloc{
+    
+    NSLog(@"SHUIImagePickerViewController被销毁");
+}
+
 #pragma mark  ----  代理
 
 #pragma mark  ----  UICollectionViewDelegate
@@ -80,9 +88,39 @@
     
     cell.imageView.image = model.thumbnails;
     [cell.selectBtn setSelected:model.selected];
+    cell.selectBtn.tag = CELLSELECTBTNBASETAG + indexPath.row;
+    [cell.selectBtn addTarget:self action:@selector(selectBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
     
     return cell;
 }
+
+#pragma mark  ----  UICollectionViewDelegateFlowLayout
+
+//返回每个item的size
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    CGFloat width = (SCREENWIDTH - 10.0 * 4)/4.0;
+    return CGSizeMake(width, width);
+}
+
+//返回上左下右四边的距离
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section{
+    
+    return UIEdgeInsetsMake(5, 5, 0, 5);
+}
+
+//返回cell之间的最小行间距
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section{
+    
+    return 5;
+}
+
+//cell之间的最小列间距
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section{
+    
+    return 5;
+}
+
 
 #pragma mark  ----  自定义函数
 
@@ -103,14 +141,30 @@
 //完成按钮的响应
 -(void)finishBtnClicked:(UIButton *)finishBtn{
 
+    NSMutableArray * selectedModelArray = [[NSMutableArray alloc] init];
+    for (SHAssetModel * model in self.dataArray) {
+        
+        if (model.selected) {
+            
+            [selectedModelArray addObject:model];
+        }
+    }
+    [self backBtnClicked:nil];
+    if (self.block) {
+        
+        self.block(selectedModelArray);
+    }
+}
+
+//cell的选择按钮被点击
+-(void)selectBtnClicked:(UIButton *)btn{
+    
+    btn.selected = !btn.selected;
+    SHAssetModel * model = self.dataArray[btn.tag - CELLSELECTBTNBASETAG];
+    model.selected = btn.selected;
 }
 
 
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    CGFloat width = (SCREENWIDTH - 10.0 * 5)/4.0;
-    return CGSizeMake(width, width);
-}
 #pragma mark  ----  懒加载
 
 -(UIView *)shNavigationBar{
@@ -133,7 +187,6 @@
         _backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [_backBtn setFrame:CGRectMake(0, 20, 44, 44)];
         _backBtn.contentEdgeInsets = UIEdgeInsetsMake(11, 11, 11, 11);
-        UIImage * image = [UIImage imageNamed:@"SHUIImagePickerControllerLibrarySource.bundle/fanhui_w.tiff"];
         [_backBtn setImage:[UIImage imageNamed:@"SHUIImagePickerControllerLibrarySource.bundle/fanhui_w.tiff"] forState:UIControlStateNormal];
         [_backBtn addTarget:self action:@selector(backBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
     }

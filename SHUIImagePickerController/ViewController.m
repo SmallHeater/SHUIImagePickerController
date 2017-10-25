@@ -7,10 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "SHUIImagePickerViewController.h"
-#import <AssetsLibrary/AssetsLibrary.h>
-#import <Photos/Photos.h>
-
+#import "SHUIImagePickerControllerLibrary.h"
 
 @interface ViewController ()
 @property (nonatomic,strong) UIButton * gotoImagePickerBnt;
@@ -38,37 +35,15 @@
 #pragma mark  ----  自定义函数
 -(void)gotoImagePickerBntClicked:(UIButton *)btn{
 
-    PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
-    if (status == PHAuthorizationStatusAuthorized) {
-        
-        SHUIImagePickerViewController * imagePicker = [[SHUIImagePickerViewController alloc] init];
-        [self presentViewController:imagePicker animated:YES completion:nil];
-    }
-    else{
-    
-        NSLog(@"无权限");
-        [self requestAuthorizationStatus_AfteriOS8];
-    }
-}
-
-- (void)requestAuthorizationStatus_AfteriOS8
-{
-    [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status){
-        dispatch_async(dispatch_get_main_queue(), ^{
-            switch (status) {
-                case PHAuthorizationStatusAuthorized:
-                {
-                    
-                    break;
-                }
-                default:
-                {
-                    break;
-                }
-            }
-        });
+    [SHUIImagePickerControllerLibrary goToSHUIImagePickerViewController:^(NSMutableArray<SHAssetModel *> *arr) {
+       
+        NSMutableArray * resultArray = [[NSMutableArray alloc] initWithArray:arr];
+        arr = nil;
+        NSLog(@"个数：%ld",resultArray.count);
     }];
 }
+
+
 
 #pragma mark  ----  懒加载
 
