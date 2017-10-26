@@ -7,8 +7,8 @@
 //  接口类
 
 #import <Foundation/Foundation.h>
-#import "SHAssetModel.h"
+
 
 @interface SHUIImagePickerControllerLibrary : NSObject
-+(void)goToSHUIImagePickerViewControllerWithMaxImageSelectCount:(NSUInteger)maxCount anResultBlock:(void(^)(NSMutableArray<SHAssetModel *> * arr))result;
++(void)goToSHUIImagePickerViewControllerWithMaxImageSelectCount:(NSUInteger)maxCount anResultBlock:(void(^)(NSMutableArray<UIImage *> * arr))result;
 @end

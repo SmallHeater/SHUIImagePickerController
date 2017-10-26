@@ -14,7 +14,7 @@
 
 @implementation SHUIImagePickerControllerLibrary
 
-+(void)goToSHUIImagePickerViewControllerWithMaxImageSelectCount:(NSUInteger)maxCount anResultBlock:(void (^)(NSMutableArray<SHAssetModel *> *))result{
++(void)goToSHUIImagePickerViewControllerWithMaxImageSelectCount:(NSUInteger)maxCount anResultBlock:(void (^)(NSMutableArray<UIImage *> *))result{
     
     if (maxCount == 0) {
         

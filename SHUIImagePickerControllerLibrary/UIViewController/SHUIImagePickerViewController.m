@@ -152,7 +152,7 @@
     [picker dismissViewControllerAnimated:YES completion:nil];
     if (image) {
         
-        NSMutableArray * selectedModelArray = [[NSMutableArray alloc] init];
+        NSMutableArray * selectedImageArray = [[NSMutableArray alloc] init];
         
         __weak typeof(self) wkself = self;
         [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
@@ -165,11 +165,12 @@
             
                 [[SHUIImagePickerController sharedManager] loadAllPhoto:^(NSMutableArray<SHAssetModel *> *arr) {
     
-                    [selectedModelArray addObject:arr.lastObject];
+                    SHAssetModel * model = arr.lastObject;
+                    [selectedImageArray addObject:model.originalImage];
                     [wkself backBtnClicked:nil];
                     if (wkself.block) {
                         
-                        wkself.block(selectedModelArray);
+                        wkself.block(selectedImageArray);
                     }
                 }];
             }
@@ -201,18 +202,18 @@
 //完成按钮的响应
 -(void)finishBtnClicked:(UIButton *)finishBtn{
 
-    NSMutableArray * selectedModelArray = [[NSMutableArray alloc] init];
+    NSMutableArray * selectedImageArray = [[NSMutableArray alloc] init];
     for (SHAssetModel * model in self.dataArray) {
         
         if (model.selected) {
             
-            [selectedModelArray addObject:model];
+            [selectedImageArray addObject:model.originalImage];
         }
     }
     [self backBtnClicked:nil];
     if (self.block) {
         
-        self.block(selectedModelArray);
+        self.block(selectedImageArray);
     }
 }
 
