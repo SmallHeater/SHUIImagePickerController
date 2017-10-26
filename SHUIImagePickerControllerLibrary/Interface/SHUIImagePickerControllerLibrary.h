@@ -10,5 +10,5 @@
 #import "SHAssetModel.h"
 
 @interface SHUIImagePickerControllerLibrary : NSObject
-+(void)goToSHUIImagePickerViewController:(void(^)(NSMutableArray<SHAssetModel *> * arr))result;
++(void)goToSHUIImagePickerViewControllerWithMaxImageSelectCount:(NSUInteger)maxCount anResultBlock:(void(^)(NSMutableArray<SHAssetModel *> * arr))result;
 @end

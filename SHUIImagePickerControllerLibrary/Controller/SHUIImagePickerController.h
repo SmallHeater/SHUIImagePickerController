@@ -11,6 +11,9 @@
 @class SHAssetModel;
 
 @interface SHUIImagePickerController : NSObject
+//剩余选择照片数
+@property (nonatomic,assign) NSUInteger canSelectImageCount;
+
 +(SHUIImagePickerController *)sharedManager;
 
 

@@ -11,6 +11,8 @@
 #import "SHUIImagePickerController.h"
 #import "SHCollectionViewCell.h"
 #import "SHAssetModel.h"
+#import "MBProgressHUD.h"
+
 
 #define CELLSELECTBTNBASETAG  1010
 
@@ -217,9 +219,29 @@
 //cell的选择按钮被点击
 -(void)selectBtnClicked:(UIButton *)btn{
     
-    btn.selected = !btn.selected;
-    SHAssetModel * model = self.dataArray[btn.tag - CELLSELECTBTNBASETAG];
-    model.selected = btn.selected;
+    if (!btn.selected) {
+        
+        if ([SHUIImagePickerController sharedManager].canSelectImageCount > 0) {
+         
+            btn.selected = !btn.selected;
+            SHAssetModel * model = self.dataArray[btn.tag - CELLSELECTBTNBASETAG];
+            model.selected = btn.selected;
+            [SHUIImagePickerController sharedManager].canSelectImageCount--;
+        }
+        else{
+        
+            [MBProgressHUD displayHudError:@"已达到最大照片选择数"];
+        }
+    }
+    else{
+    
+        btn.selected = !btn.selected;
+        SHAssetModel * model = self.dataArray[btn.tag - CELLSELECTBTNBASETAG];
+        model.selected = btn.selected;
+        [SHUIImagePickerController sharedManager].canSelectImageCount++;
+    }
+    
+   
 }
 
 

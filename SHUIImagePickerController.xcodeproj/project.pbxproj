@@ -31,6 +31,7 @@
 		62DE4BB71FA175C70086CE06 /* UIColor+Translate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DE4BB61FA175C70086CE06 /* UIColor+Translate.m */; };
 		62DE4BBA1FA179F00086CE06 /* camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62DE4BB81FA179F00086CE06 /* camera@2x.png */; };
 		62DE4BBB1FA179F00086CE06 /* camera@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62DE4BB91FA179F00086CE06 /* camera@3x.png */; };
+		62DE4BBF1FA1AAC60086CE06 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DE4BBE1FA1AAC60086CE06 /* MBProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +118,8 @@
 		62DE4BB61FA175C70086CE06 /* UIColor+Translate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Translate.m"; sourceTree = "<group>"; };
 		62DE4BB81FA179F00086CE06 /* camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera@2x.png"; sourceTree = "<group>"; };
 		62DE4BB91FA179F00086CE06 /* camera@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera@3x.png"; sourceTree = "<group>"; };
+		62DE4BBD1FA1AAC60086CE06 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		62DE4BBE1FA1AAC60086CE06 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +189,7 @@
 		62DE4ADF1F9F1CC50086CE06 /* SHUIImagePickerController */ = {
 			isa = PBXGroup;
 			children = (
+				62DE4BBC1FA1AAC60086CE06 /* MBProgressHUD */,
 				62DE4BB41FA175C70086CE06 /* Category */,
 				62DE4AE31F9F1CC50086CE06 /* AppDelegate.h */,
 				62DE4AE41F9F1CC50086CE06 /* AppDelegate.m */,
@@ -315,6 +319,15 @@
 				62DE4BB61FA175C70086CE06 /* UIColor+Translate.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		62DE4BBC1FA1AAC60086CE06 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				62DE4BBD1FA1AAC60086CE06 /* MBProgressHUD.h */,
+				62DE4BBE1FA1AAC60086CE06 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -518,6 +531,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				62DE4AE81F9F1CC50086CE06 /* ViewController.m in Sources */,
+				62DE4BBF1FA1AAC60086CE06 /* MBProgressHUD.m in Sources */,
 				62DE4AE51F9F1CC50086CE06 /* AppDelegate.m in Sources */,
 				62DE4BB71FA175C70086CE06 /* UIColor+Translate.m in Sources */,
 				62DE4AE21F9F1CC50086CE06 /* main.m in Sources */,

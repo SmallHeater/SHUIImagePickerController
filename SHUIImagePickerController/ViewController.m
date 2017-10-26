@@ -35,8 +35,8 @@
 #pragma mark  ----  自定义函数
 -(void)gotoImagePickerBntClicked:(UIButton *)btn{
 
-    [SHUIImagePickerControllerLibrary goToSHUIImagePickerViewController:^(NSMutableArray<SHAssetModel *> *arr) {
-       
+    [SHUIImagePickerControllerLibrary goToSHUIImagePickerViewControllerWithMaxImageSelectCount:5 anResultBlock:^(NSMutableArray<SHAssetModel *> *arr) {
+        
         NSMutableArray * resultArray = [[NSMutableArray alloc] initWithArray:arr];
         arr = nil;
         NSLog(@"个数：%ld",resultArray.count);

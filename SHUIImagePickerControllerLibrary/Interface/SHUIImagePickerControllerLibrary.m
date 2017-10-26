@@ -14,8 +14,13 @@
 
 @implementation SHUIImagePickerControllerLibrary
 
-+(void)goToSHUIImagePickerViewController:(void (^)(NSMutableArray<SHAssetModel *> *))result{
++(void)goToSHUIImagePickerViewControllerWithMaxImageSelectCount:(NSUInteger)maxCount anResultBlock:(void (^)(NSMutableArray<SHAssetModel *> *))result{
     
+    if (maxCount == 0) {
+        
+        return;
+    }
+    [SHUIImagePickerController sharedManager].canSelectImageCount = maxCount;
     if ([[SHUIImagePickerController sharedManager] getAlbumAuthority]) {
         
         //有权限
