@@ -17,13 +17,20 @@
 		62DE4AFB1F9F1CC50086CE06 /* SHUIImagePickerControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DE4AFA1F9F1CC50086CE06 /* SHUIImagePickerControllerTests.m */; };
 		62DE4B061F9F1CC50086CE06 /* SHUIImagePickerControllerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DE4B051F9F1CC50086CE06 /* SHUIImagePickerControllerUITests.m */; };
 		62DE4B261F9F1D7A0086CE06 /* SHUIImagePickerControllerLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DE4B221F9F1D7A0086CE06 /* SHUIImagePickerControllerLibrary.m */; };
-		62DE4B301F9F23A80086CE06 /* UIColor+Translate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DE4B2F1F9F23A80086CE06 /* UIColor+Translate.m */; };
 		62DE4B341F9F25E90086CE06 /* SHUIImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DE4B331F9F25E90086CE06 /* SHUIImagePickerController.m */; };
 		62DE4B381F9F27CD0086CE06 /* SHCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DE4B371F9F27CD0086CE06 /* SHCollectionViewCell.m */; };
 		62DE4B3B1F9F29BC0086CE06 /* SHAssetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DE4B3A1F9F29BC0086CE06 /* SHAssetModel.m */; };
 		62DE4B921FA098020086CE06 /* SHUIImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DE4B281F9F1DA30086CE06 /* SHUIImagePickerViewController.m */; };
 		62DE4BA11FA09D690086CE06 /* fanhui_w@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62DE4B9F1FA09D690086CE06 /* fanhui_w@2x.png */; };
 		62DE4BA21FA09D690086CE06 /* fanhui_w@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62DE4BA01FA09D690086CE06 /* fanhui_w@3x.png */; };
+		62DE4BAF1FA1715E0086CE06 /* noSelected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62DE4BAB1FA1715E0086CE06 /* noSelected@2x.png */; };
+		62DE4BB01FA1715E0086CE06 /* noSelected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62DE4BAC1FA1715E0086CE06 /* noSelected@3x.png */; };
+		62DE4BB11FA1715E0086CE06 /* selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62DE4BAD1FA1715E0086CE06 /* selected@2x.png */; };
+		62DE4BB21FA1715E0086CE06 /* selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62DE4BAE1FA1715E0086CE06 /* selected@3x.png */; };
+		62DE4BB31FA1752F0086CE06 /* libSHUIImagePickerControllerLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62DE4B171F9F1CF10086CE06 /* libSHUIImagePickerControllerLibrary.a */; };
+		62DE4BB71FA175C70086CE06 /* UIColor+Translate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DE4BB61FA175C70086CE06 /* UIColor+Translate.m */; };
+		62DE4BBA1FA179F00086CE06 /* camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62DE4BB81FA179F00086CE06 /* camera@2x.png */; };
+		62DE4BBB1FA179F00086CE06 /* camera@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62DE4BB91FA179F00086CE06 /* camera@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,8 +99,6 @@
 		62DE4B271F9F1DA30086CE06 /* SHUIImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHUIImagePickerViewController.h; sourceTree = "<group>"; };
 		62DE4B281F9F1DA30086CE06 /* SHUIImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHUIImagePickerViewController.m; sourceTree = "<group>"; };
 		62DE4B2C1F9F20FE0086CE06 /* SHUIImagePickerControllerLibrary.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHUIImagePickerControllerLibrary.pch; sourceTree = "<group>"; };
-		62DE4B2E1F9F23A80086CE06 /* UIColor+Translate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Translate.h"; sourceTree = "<group>"; };
-		62DE4B2F1F9F23A80086CE06 /* UIColor+Translate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Translate.m"; sourceTree = "<group>"; };
 		62DE4B321F9F25E90086CE06 /* SHUIImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHUIImagePickerController.h; sourceTree = "<group>"; };
 		62DE4B331F9F25E90086CE06 /* SHUIImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHUIImagePickerController.m; sourceTree = "<group>"; };
 		62DE4B361F9F27CD0086CE06 /* SHCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHCollectionViewCell.h; sourceTree = "<group>"; };
@@ -104,6 +109,14 @@
 		62DE4B9B1FA09D590086CE06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62DE4B9F1FA09D690086CE06 /* fanhui_w@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fanhui_w@2x.png"; sourceTree = "<group>"; };
 		62DE4BA01FA09D690086CE06 /* fanhui_w@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fanhui_w@3x.png"; sourceTree = "<group>"; };
+		62DE4BAB1FA1715E0086CE06 /* noSelected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "noSelected@2x.png"; sourceTree = "<group>"; };
+		62DE4BAC1FA1715E0086CE06 /* noSelected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "noSelected@3x.png"; sourceTree = "<group>"; };
+		62DE4BAD1FA1715E0086CE06 /* selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "selected@2x.png"; sourceTree = "<group>"; };
+		62DE4BAE1FA1715E0086CE06 /* selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "selected@3x.png"; sourceTree = "<group>"; };
+		62DE4BB51FA175C70086CE06 /* UIColor+Translate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Translate.h"; sourceTree = "<group>"; };
+		62DE4BB61FA175C70086CE06 /* UIColor+Translate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Translate.m"; sourceTree = "<group>"; };
+		62DE4BB81FA179F00086CE06 /* camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera@2x.png"; sourceTree = "<group>"; };
+		62DE4BB91FA179F00086CE06 /* camera@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62DE4BB31FA1752F0086CE06 /* libSHUIImagePickerControllerLibrary.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,6 +186,7 @@
 		62DE4ADF1F9F1CC50086CE06 /* SHUIImagePickerController */ = {
 			isa = PBXGroup;
 			children = (
+				62DE4BB41FA175C70086CE06 /* Category */,
 				62DE4AE31F9F1CC50086CE06 /* AppDelegate.h */,
 				62DE4AE41F9F1CC50086CE06 /* AppDelegate.m */,
 				62DE4AE61F9F1CC50086CE06 /* ViewController.h */,
@@ -216,7 +231,6 @@
 			children = (
 				62DE4B351F9F27A30086CE06 /* Cell */,
 				62DE4B311F9F25C40086CE06 /* Controller */,
-				62DE4B2D1F9F23A80086CE06 /* Category */,
 				62DE4B201F9F1D7A0086CE06 /* Interface */,
 				62DE4B231F9F1D7A0086CE06 /* Model */,
 				62DE4B241F9F1D7A0086CE06 /* UIView */,
@@ -260,15 +274,6 @@
 			path = UIViewController;
 			sourceTree = "<group>";
 		};
-		62DE4B2D1F9F23A80086CE06 /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				62DE4B2E1F9F23A80086CE06 /* UIColor+Translate.h */,
-				62DE4B2F1F9F23A80086CE06 /* UIColor+Translate.m */,
-			);
-			path = Category;
-			sourceTree = "<group>";
-		};
 		62DE4B311F9F25C40086CE06 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -290,11 +295,26 @@
 		62DE4B9A1FA09D590086CE06 /* SHUIImagePickerControllerLibrarySource */ = {
 			isa = PBXGroup;
 			children = (
+				62DE4BB81FA179F00086CE06 /* camera@2x.png */,
+				62DE4BB91FA179F00086CE06 /* camera@3x.png */,
+				62DE4BAB1FA1715E0086CE06 /* noSelected@2x.png */,
+				62DE4BAC1FA1715E0086CE06 /* noSelected@3x.png */,
+				62DE4BAD1FA1715E0086CE06 /* selected@2x.png */,
+				62DE4BAE1FA1715E0086CE06 /* selected@3x.png */,
 				62DE4B9F1FA09D690086CE06 /* fanhui_w@2x.png */,
 				62DE4BA01FA09D690086CE06 /* fanhui_w@3x.png */,
 				62DE4B9B1FA09D590086CE06 /* Info.plist */,
 			);
 			path = SHUIImagePickerControllerLibrarySource;
+			sourceTree = "<group>";
+		};
+		62DE4BB41FA175C70086CE06 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				62DE4BB51FA175C70086CE06 /* UIColor+Translate.h */,
+				62DE4BB61FA175C70086CE06 /* UIColor+Translate.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -479,6 +499,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62DE4BB21FA1715E0086CE06 /* selected@3x.png in Resources */,
+				62DE4BAF1FA1715E0086CE06 /* noSelected@2x.png in Resources */,
+				62DE4BB01FA1715E0086CE06 /* noSelected@3x.png in Resources */,
+				62DE4BB11FA1715E0086CE06 /* selected@2x.png in Resources */,
+				62DE4BBB1FA179F00086CE06 /* camera@3x.png in Resources */,
+				62DE4BBA1FA179F00086CE06 /* camera@2x.png in Resources */,
 				62DE4BA21FA09D690086CE06 /* fanhui_w@3x.png in Resources */,
 				62DE4BA11FA09D690086CE06 /* fanhui_w@2x.png in Resources */,
 			);
@@ -493,6 +519,7 @@
 			files = (
 				62DE4AE81F9F1CC50086CE06 /* ViewController.m in Sources */,
 				62DE4AE51F9F1CC50086CE06 /* AppDelegate.m in Sources */,
+				62DE4BB71FA175C70086CE06 /* UIColor+Translate.m in Sources */,
 				62DE4AE21F9F1CC50086CE06 /* main.m in Sources */,
 				62DE4B921FA098020086CE06 /* SHUIImagePickerViewController.m in Sources */,
 			);
@@ -520,7 +547,6 @@
 			files = (
 				62DE4B381F9F27CD0086CE06 /* SHCollectionViewCell.m in Sources */,
 				62DE4B341F9F25E90086CE06 /* SHUIImagePickerController.m in Sources */,
-				62DE4B301F9F23A80086CE06 /* UIColor+Translate.m in Sources */,
 				62DE4B261F9F1D7A0086CE06 /* SHUIImagePickerControllerLibrary.m in Sources */,
 				62DE4B3B1F9F29BC0086CE06 /* SHAssetModel.m in Sources */,
 			);
@@ -676,10 +702,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SHUIImagePickerControllerLibrary/Interface/SHUIImagePickerControllerLibrary.pch";
 				INFOPLIST_FILE = SHUIImagePickerController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = (
-					"-force_load",
-					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/SHUIImagePickerController-emgsbzwwbjfxewhbnabnpztpsyrv/Build/Products/Debug-iphonesimulator/libSHUIImagePickerControllerLibrary.a\"",
-				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.smallHeat.SHUIImagePickerController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -693,10 +716,7 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SHUIImagePickerControllerLibrary/Interface/SHUIImagePickerControllerLibrary.pch";
 				INFOPLIST_FILE = SHUIImagePickerController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = (
-					"-force_load",
-					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/SHUIImagePickerController-emgsbzwwbjfxewhbnabnpztpsyrv/Build/Products/Debug-iphonesimulator/libSHUIImagePickerControllerLibrary.a\"",
-				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.smallHeat.SHUIImagePickerController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

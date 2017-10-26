@@ -7,7 +7,7 @@
 //
 
 #import "SHAssetModel.h"
-#import <Photos/Photos.h>
+
 
 
 @implementation SHAssetModel

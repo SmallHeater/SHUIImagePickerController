@@ -15,7 +15,7 @@
 #define CELLSELECTBTNBASETAG  1010
 
 
-@interface SHUIImagePickerViewController ()<UICollectionViewDelegate, UICollectionViewDataSource>
+@interface SHUIImagePickerViewController ()<UICollectionViewDelegate, UICollectionViewDataSource,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 //自定义导航条
 @property (nonatomic,strong) UIView * shNavigationBar;
 //返回按钮
@@ -43,6 +43,7 @@
     [[SHUIImagePickerController sharedManager] loadAllPhoto:^(NSMutableArray<SHAssetModel *> *arr) {
         
         [self.dataArray addObjectsFromArray:arr];
+         NSLog(@"老个数：%ld",self.dataArray.count);
         [self.collectionView reloadData];
     }];
 }
@@ -68,7 +69,23 @@
 #pragma mark  ----  代理
 
 #pragma mark  ----  UICollectionViewDelegate
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
 
+    if (indexPath.row == 0) {
+        
+        //去拍照
+        UIImagePickerControllerSourceType sourceType=UIImagePickerControllerSourceTypeCamera;
+        if(![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+        {
+            sourceType=UIImagePickerControllerSourceTypePhotoLibrary;
+        }
+        UIImagePickerController *picker=[[UIImagePickerController alloc]init];
+        picker.delegate=self;
+        picker.sourceType=sourceType;
+        picker.allowsEditing= NO;
+        [self  presentViewController:picker animated:YES completion:nil];
+    }
+}
 #pragma mark  ----  UICollectionViewDataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
@@ -81,16 +98,21 @@
     
     SHCollectionViewCell *cell=[collectionView dequeueReusableCellWithReuseIdentifier:@"SHCollectionViewCell" forIndexPath:indexPath];
     
-    SHAssetModel * model = nil;
-    if (indexPath.row < self.dataArray.count) {
-        model = [self.dataArray objectAtIndex:indexPath.row];
+    if (indexPath.row == 0) {
+        
+        SHAssetModel * model = [self.dataArray objectAtIndex:indexPath.row];
+        cell.imageView.image = model.thumbnails;
+        cell.selectBtn.hidden = YES;
     }
+    else{
     
-    cell.imageView.image = model.thumbnails;
-    [cell.selectBtn setSelected:model.selected];
-    cell.selectBtn.tag = CELLSELECTBTNBASETAG + indexPath.row;
-    [cell.selectBtn addTarget:self action:@selector(selectBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
-    
+        SHAssetModel * model = [self.dataArray objectAtIndex:indexPath.row];
+        cell.imageView.image = model.thumbnails;
+        cell.selectBtn.hidden = NO;
+        [cell.selectBtn setSelected:model.selected];
+        cell.selectBtn.tag = CELLSELECTBTNBASETAG + indexPath.row;
+        [cell.selectBtn addTarget:self action:@selector(selectBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
+    }
     return cell;
 }
 
@@ -119,6 +141,42 @@
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section{
     
     return 5;
+}
+
+#pragma mark  ----  UIImagePickerControllerDelegate
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo
+{
+    
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    if (image) {
+        
+        NSMutableArray * selectedModelArray = [[NSMutableArray alloc] init];
+        
+        __weak typeof(self) wkself = self;
+        [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
+            
+             [PHAssetCreationRequest creationRequestForAssetFromImage:image];
+            
+        } completionHandler:^(BOOL success, NSError * _Nullable error) {
+            
+            if (success) {
+            
+                [[SHUIImagePickerController sharedManager] loadAllPhoto:^(NSMutableArray<SHAssetModel *> *arr) {
+    
+                    [selectedModelArray addObject:arr.lastObject];
+                    [wkself backBtnClicked:nil];
+                    if (wkself.block) {
+                        
+                        wkself.block(selectedModelArray);
+                    }
+                }];
+            }
+            else{
+            
+                NSLog(@"image转PHAsset失败，%@",error);
+            }
+        }];
+    }
 }
 
 

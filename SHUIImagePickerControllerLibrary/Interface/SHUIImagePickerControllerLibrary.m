@@ -8,26 +8,21 @@
 
 #import "SHUIImagePickerControllerLibrary.h"
 #import "SHUIImagePickerViewController.h"
-#import <Photos/Photos.h>
+#import "SHUIImagePickerController.h"
+
+
 
 @implementation SHUIImagePickerControllerLibrary
 
 +(void)goToSHUIImagePickerViewController:(void (^)(NSMutableArray<SHAssetModel *> *))result{
     
-    PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
-    if (status == PHAuthorizationStatusAuthorized) {
+    if ([[SHUIImagePickerController sharedManager] getAlbumAuthority]) {
         
-        //有访问相册权限
+        //有权限
         SHUIImagePickerViewController * imagePickerViewController = [[SHUIImagePickerViewController alloc] init];
         imagePickerViewController.block = result;
         [[self currentViewController] presentViewController:imagePickerViewController animated:YES completion:nil];
     }
-    else{
-        
-        [self requestAuthorizationStatus_AfteriOS8];
-    }
-    
-    
 }
 
 + (UIViewController *)currentViewController
@@ -51,24 +46,7 @@
 }
 
 
-+ (void)requestAuthorizationStatus_AfteriOS8
-{
-    [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status){
-        dispatch_async(dispatch_get_main_queue(), ^{
-            switch (status) {
-                case PHAuthorizationStatusAuthorized:
-                {
-                    
-                    break;
-                }
-                default:
-                {
-                    break;
-                }
-            }
-        });
-    }];
-}
+
 
 
 @end

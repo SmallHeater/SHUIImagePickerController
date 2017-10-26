@@ -2,8 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CFBundleLocalizations</key>
+	<array>
+		<string>zh_CN</string>
+	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>亲，使用您的相机可以吗?</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>亲，访问你的相册可以吗？</string>
+	<string>亲，访问您的相册可以吗？</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>

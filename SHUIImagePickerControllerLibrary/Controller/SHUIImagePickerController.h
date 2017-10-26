@@ -18,4 +18,7 @@
 - (void)loadAllPhoto:(void(^)(NSMutableArray<SHAssetModel *> *arr))result;
 
 
+//判断有无使用相册权限
+-(BOOL)getAlbumAuthority;
+
 @end

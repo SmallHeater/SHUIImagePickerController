@@ -9,7 +9,7 @@
 #ifndef SHUIImagePickerControllerLibrary_pch
 #define SHUIImagePickerControllerLibrary_pch
 
-
+#import <Photos/Photos.h>
 #import "UIColor+Translate.h"
 
 #define SCREENWIDTH [UIScreen mainScreen].bounds.size.width
