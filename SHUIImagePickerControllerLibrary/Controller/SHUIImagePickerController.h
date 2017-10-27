@@ -24,4 +24,6 @@
 //判断有无使用相册权限
 -(BOOL)getAlbumAuthority;
 
+//清理内存(本模块生命周期结束时调用)
+-(void)clearMemary;
 @end

@@ -29,6 +29,8 @@
 @property (nonatomic,retain) UICollectionView *collectionView;
 //存储模型的数组
 @property (nonatomic,strong) NSMutableArray<SHAssetModel *> * dataArray;
+//存储选中的模型的数组
+@property (nonatomic,strong) NSMutableArray<SHAssetModel *> * selectedModelArray;
 @end
 
 @implementation SHUIImagePickerViewController
@@ -45,7 +47,6 @@
     [[SHUIImagePickerController sharedManager] loadAllPhoto:^(NSMutableArray<SHAssetModel *> *arr) {
         
         [self.dataArray addObjectsFromArray:arr];
-         NSLog(@"老个数：%ld",self.dataArray.count);
         [self.collectionView reloadData];
     }];
 }
@@ -202,14 +203,8 @@
 //完成按钮的响应
 -(void)finishBtnClicked:(UIButton *)finishBtn{
 
-    NSMutableArray * selectedImageArray = [[NSMutableArray alloc] init];
-    for (SHAssetModel * model in self.dataArray) {
-        
-        if (model.selected) {
-            
-            [selectedImageArray addObject:model.originalImage];
-        }
-    }
+    NSMutableArray * selectedImageArray = [[NSMutableArray alloc] initWithArray:self.selectedModelArray];
+    
     [self backBtnClicked:nil];
     if (self.block) {
         
@@ -228,6 +223,7 @@
             SHAssetModel * model = self.dataArray[btn.tag - CELLSELECTBTNBASETAG];
             model.selected = btn.selected;
             [SHUIImagePickerController sharedManager].canSelectImageCount--;
+            [self.selectedModelArray addObject:model];
         }
         else{
         
@@ -240,6 +236,7 @@
         SHAssetModel * model = self.dataArray[btn.tag - CELLSELECTBTNBASETAG];
         model.selected = btn.selected;
         [SHUIImagePickerController sharedManager].canSelectImageCount++;
+        [self.selectedModelArray removeObject:model];
     }
     
    
@@ -321,6 +318,15 @@
         _dataArray = [[NSMutableArray alloc] init];
     }
     return _dataArray;
+}
+
+-(NSMutableArray<SHAssetModel *> *)selectedModelArray{
+
+    if (!_selectedModelArray) {
+        
+        _selectedModelArray = [[NSMutableArray alloc] init];
+    }
+    return _selectedModelArray;
 }
 
 @end

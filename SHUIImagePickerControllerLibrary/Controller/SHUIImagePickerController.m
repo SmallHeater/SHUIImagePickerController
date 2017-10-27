@@ -96,6 +96,12 @@
     }];
 }
 
+//清理内存(本模块生命周期结束时调用)
+-(void)clearMemary{
+
+    [self.shAssetModelArray removeAllObjects];
+}
+
 #pragma mark  ----  懒加载
 -(NSMutableArray<SHAssetModel *> *)shAssetModelArray{
 

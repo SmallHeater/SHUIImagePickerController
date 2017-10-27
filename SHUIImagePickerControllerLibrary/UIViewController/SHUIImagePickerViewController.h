@@ -14,6 +14,6 @@ typedef void(^resultBlock)(NSMutableArray<SHAssetModel *> * selectModelArray);
 
 @interface SHUIImagePickerViewController : UIViewController
 
-@property (nonatomic,weak) resultBlock block;
+@property (nonatomic,strong) resultBlock block;
 
 @end
