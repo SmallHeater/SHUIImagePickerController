@@ -275,7 +275,7 @@
     if (!_titleLabel) {
         _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMaxX(self.backBtn.frame), 20, SCREENWIDTH - CGRectGetMaxX(self.backBtn.frame) * 2, 44)];
         _titleLabel.textColor = Color_FFFFFF;
-        _titleLabel.font = [UIFont systemFontOfSize:18.0f];
+        _titleLabel.font = [UIFont boldSystemFontOfSize:18.0f];
         _titleLabel.textAlignment = NSTextAlignmentCenter;
         _titleLabel.text = @"照片";
     }
@@ -288,6 +288,7 @@
         
         _finishBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [_finishBtn setFrame:CGRectMake(SCREENWIDTH -44, 20, 44, 44)];
+        _finishBtn.titleLabel.font = [UIFont systemFontOfSize:14.0];
         [_finishBtn setTitle:@"完成" forState:UIControlStateNormal];
         [_finishBtn addTarget:self action:@selector(finishBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
     }
