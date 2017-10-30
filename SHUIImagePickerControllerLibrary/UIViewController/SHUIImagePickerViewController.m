@@ -166,7 +166,7 @@
             
                 [[SHUIImagePickerController sharedManager] loadAllPhoto:^(NSMutableArray<SHAssetModel *> *arr) {
     
-                    SHAssetModel * model = arr.lastObject;
+                    SHAssetModel * model = arr.firstObject;
                     [selectedImageArray addObject:model.originalImage];
                     [wkself backBtnClicked:nil];
                     if (wkself.block) {
