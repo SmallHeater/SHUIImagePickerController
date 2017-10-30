@@ -166,7 +166,8 @@
             
                 [[SHUIImagePickerController sharedManager] loadAllPhoto:^(NSMutableArray<SHAssetModel *> *arr) {
     
-                    SHAssetModel * model = arr.firstObject;
+                    //第一个是默认的照相机项
+                    SHAssetModel * model = arr[1];
                     [selectedImageArray addObject:model.originalImage];
                     [wkself backBtnClicked:nil];
                     if (wkself.block) {
