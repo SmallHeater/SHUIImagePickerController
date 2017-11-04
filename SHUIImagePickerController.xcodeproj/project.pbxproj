@@ -32,7 +32,6 @@
 		62DE4BFE1FA1C6130086CE06 /* SHUIImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DE4B281F9F1DA30086CE06 /* SHUIImagePickerViewController.m */; };
 		62DE4C281FA2D2D70086CE06 /* camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62DE4C261FA2D2D60086CE06 /* camera@2x.png */; };
 		62DE4C291FA2D2D70086CE06 /* camera@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 62DE4C271FA2D2D70086CE06 /* camera@3x.png */; };
-		62DE4C651FA322F30086CE06 /* BigPictureBrowsing.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DE4C641FA322F30086CE06 /* BigPictureBrowsing.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,8 +120,6 @@
 		62DE4BBE1FA1AAC60086CE06 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		62DE4C261FA2D2D60086CE06 /* camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera@2x.png"; sourceTree = "<group>"; };
 		62DE4C271FA2D2D70086CE06 /* camera@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera@3x.png"; sourceTree = "<group>"; };
-		62DE4C631FA322F30086CE06 /* BigPictureBrowsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BigPictureBrowsing.h; sourceTree = "<group>"; };
-		62DE4C641FA322F30086CE06 /* BigPictureBrowsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BigPictureBrowsing.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -337,8 +334,6 @@
 		62DE4C621FA322F30086CE06 /* BigPictureBrowsing */ = {
 			isa = PBXGroup;
 			children = (
-				62DE4C631FA322F30086CE06 /* BigPictureBrowsing.h */,
-				62DE4C641FA322F30086CE06 /* BigPictureBrowsing.m */,
 			);
 			path = BigPictureBrowsing;
 			sourceTree = "<group>";
@@ -571,7 +566,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62DE4C651FA322F30086CE06 /* BigPictureBrowsing.m in Sources */,
 				62DE4BFE1FA1C6130086CE06 /* SHUIImagePickerViewController.m in Sources */,
 				62DE4B381F9F27CD0086CE06 /* SHCollectionViewCell.m in Sources */,
 				62DE4B341F9F25E90086CE06 /* SHUIImagePickerController.m in Sources */,
