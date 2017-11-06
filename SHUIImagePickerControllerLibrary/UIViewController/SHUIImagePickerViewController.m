@@ -168,7 +168,7 @@
     
                     //第一个是默认的照相机项
                     SHAssetModel * model = arr[1];
-                    [selectedImageArray addObject:model.originalImage];
+                    [selectedImageArray addObject:model];
                     [wkself backBtnClicked:nil];
                     if (wkself.block) {
                         

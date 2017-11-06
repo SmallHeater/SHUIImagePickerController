@@ -330,6 +330,15 @@
 			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
+
+		62DE4C621FA322F30086CE06 /* BigPictureBrowsing */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BigPictureBrowsing;
+			sourceTree = "<group>";
+		};
+
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
