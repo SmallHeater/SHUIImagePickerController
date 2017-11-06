@@ -43,7 +43,7 @@
     if (!_selectBtn) {
         
         _selectBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        _selectBtn.frame = CGRectMake(63, 4, 20, 20);
+        _selectBtn.frame = CGRectMake(self.frame.size.width - 20, 0, 20, 20);
         [_selectBtn setImage:[UIImage imageNamed:@"SHUIImagePickerControllerLibrarySource.bundle/noSelected.tiff"] forState:UIControlStateNormal];
         [_selectBtn setImage:[UIImage imageNamed:@"SHUIImagePickerControllerLibrarySource.bundle/selected.tiff"] forState:UIControlStateSelected];
     }
