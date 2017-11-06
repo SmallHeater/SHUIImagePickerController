@@ -76,17 +76,20 @@
 
     if (indexPath.row == 0) {
         
-        //去拍照
-        UIImagePickerControllerSourceType sourceType=UIImagePickerControllerSourceTypeCamera;
-        if(![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
-        {
-            sourceType=UIImagePickerControllerSourceTypePhotoLibrary;
+        if ([[SHUIImagePickerController sharedManager] getCameraAuthority]) {
+         
+            //去拍照
+            UIImagePickerControllerSourceType sourceType=UIImagePickerControllerSourceTypeCamera;
+            if(![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+            {
+                sourceType=UIImagePickerControllerSourceTypePhotoLibrary;
+            }
+            UIImagePickerController *picker=[[UIImagePickerController alloc]init];
+            picker.delegate=self;
+            picker.sourceType=sourceType;
+            picker.allowsEditing= NO;
+            [self  presentViewController:picker animated:YES completion:nil];
         }
-        UIImagePickerController *picker=[[UIImagePickerController alloc]init];
-        picker.delegate=self;
-        picker.sourceType=sourceType;
-        picker.allowsEditing= NO;
-        [self  presentViewController:picker animated:YES completion:nil];
     }
 }
 #pragma mark  ----  UICollectionViewDataSource

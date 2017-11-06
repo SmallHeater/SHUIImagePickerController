@@ -71,30 +71,44 @@
     }
     else{
         
-        [self requestAuthorizationStatus_AfteriOS8];
+        //请求相册权限
+        [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status){
+            dispatch_async(dispatch_get_main_queue(), ^{
+                switch (status) {
+                    case PHAuthorizationStatusAuthorized:
+                    {
+                        
+                        break;
+                    }
+                    default:
+                    {
+                        break;
+                    }
+                }
+            });
+        }];
+        return NO;
+    }
+}
+//判断有无照相机使用权限
+-(BOOL)getCameraAuthority{
+    
+    NSString *mediaType = AVMediaTypeVideo;//读取媒体类型
+    AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:mediaType];//读取设备授权状态
+    if(authStatus == AVAuthorizationStatusAuthorized){
+        
+        return YES;
+    }
+    else{
+        
+        //请求相机权限
+        [AVCaptureDevice requestAccessForMediaType:mediaType completionHandler:^(BOOL granted) {
+            
+        }];
         return NO;
     }
 }
 
-//请求相册权限
-- (void)requestAuthorizationStatus_AfteriOS8
-{
-    [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status){
-        dispatch_async(dispatch_get_main_queue(), ^{
-            switch (status) {
-                case PHAuthorizationStatusAuthorized:
-                {
-                    
-                    break;
-                }
-                default:
-                {
-                    break;
-                }
-            }
-        });
-    }];
-}
 
 //清理内存(本模块生命周期结束时调用)
 -(void)clearMemary{
