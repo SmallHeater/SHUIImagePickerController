@@ -41,7 +41,7 @@
 -(void)gotoImagePickerBntClicked:(UIButton *)btn{
 
     for (UIImageView * imageView in self.imageViewBGScrollView.subviews) {
-        
+
         [imageView removeFromSuperview];
     }
     
@@ -49,27 +49,27 @@
         
         NSMutableArray * resultArray = [[NSMutableArray alloc] initWithArray:arr];
         arr = nil;
-        for (NSUInteger i = 0; i < resultArray.count; i++) {
-            
-            SHAssetModel * model = resultArray[i];
-            UIImageView * imageView = [[UIImageView alloc] initWithImage:model.thumbnails];
-            imageView.frame = CGRectMake(i * 95, 5, 90, 90);
-            
-            if (i == resultArray.count - 1) {
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+           
+            for (NSUInteger i = 0; i < resultArray.count; i++) {
                 
-                self.imageViewBGScrollView.contentSize = CGSizeMake(resultArray.count * 95, 90);
+                SHAssetModel * model = resultArray[i];
+                UIImageView * imageView = [[UIImageView alloc] initWithImage:model.thumbnails];
+                imageView.frame = CGRectMake(i * 95, 5, 90, 90);
+                
+                if (i == resultArray.count - 1) {
+                    
+                    self.imageViewBGScrollView.contentSize = CGSizeMake(resultArray.count * 95, 90);
+                }
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    
+                    [self.imageViewBGScrollView addSubview:imageView];
+                });
             }
-            dispatch_async(dispatch_get_main_queue(), ^{
-               
-                [self.imageViewBGScrollView addSubview:imageView];
-            });
-        }
-        
-        
+        });
     }];
 }
-
-
 
 #pragma mark  ----  懒加载
 

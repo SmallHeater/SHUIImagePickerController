@@ -14,8 +14,6 @@
 		62DE4AEB1F9F1CC50086CE06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62DE4AE91F9F1CC50086CE06 /* Main.storyboard */; };
 		62DE4AED1F9F1CC50086CE06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62DE4AEC1F9F1CC50086CE06 /* Assets.xcassets */; };
 		62DE4AF01F9F1CC50086CE06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62DE4AEE1F9F1CC50086CE06 /* LaunchScreen.storyboard */; };
-		62DE4AFB1F9F1CC50086CE06 /* SHUIImagePickerControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DE4AFA1F9F1CC50086CE06 /* SHUIImagePickerControllerTests.m */; };
-		62DE4B061F9F1CC50086CE06 /* SHUIImagePickerControllerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DE4B051F9F1CC50086CE06 /* SHUIImagePickerControllerUITests.m */; };
 		62DE4B261F9F1D7A0086CE06 /* SHUIImagePickerControllerLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DE4B221F9F1D7A0086CE06 /* SHUIImagePickerControllerLibrary.m */; };
 		62DE4B341F9F25E90086CE06 /* SHUIImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DE4B331F9F25E90086CE06 /* SHUIImagePickerController.m */; };
 		62DE4B381F9F27CD0086CE06 /* SHCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DE4B371F9F27CD0086CE06 /* SHCollectionViewCell.m */; };
@@ -41,20 +39,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 62DE4B981FA09D590086CE06;
 			remoteInfo = SHUIImagePickerControllerLibrarySource;
-		};
-		62DE4AF71F9F1CC50086CE06 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 62DE4AD51F9F1CC50086CE06 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 62DE4ADC1F9F1CC50086CE06;
-			remoteInfo = SHUIImagePickerController;
-		};
-		62DE4B021F9F1CC50086CE06 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 62DE4AD51F9F1CC50086CE06 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 62DE4ADC1F9F1CC50086CE06;
-			remoteInfo = SHUIImagePickerController;
 		};
 		62DE4B931FA0999B0086CE06 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -88,12 +72,6 @@
 		62DE4AEC1F9F1CC50086CE06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62DE4AEF1F9F1CC50086CE06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		62DE4AF11F9F1CC50086CE06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		62DE4AF61F9F1CC50086CE06 /* SHUIImagePickerControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SHUIImagePickerControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		62DE4AFA1F9F1CC50086CE06 /* SHUIImagePickerControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHUIImagePickerControllerTests.m; sourceTree = "<group>"; };
-		62DE4AFC1F9F1CC50086CE06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		62DE4B011F9F1CC50086CE06 /* SHUIImagePickerControllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SHUIImagePickerControllerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		62DE4B051F9F1CC50086CE06 /* SHUIImagePickerControllerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SHUIImagePickerControllerUITests.m; sourceTree = "<group>"; };
-		62DE4B071F9F1CC50086CE06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62DE4B171F9F1CF10086CE06 /* libSHUIImagePickerControllerLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSHUIImagePickerControllerLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		62DE4B211F9F1D7A0086CE06 /* SHUIImagePickerControllerLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHUIImagePickerControllerLibrary.h; sourceTree = "<group>"; };
 		62DE4B221F9F1D7A0086CE06 /* SHUIImagePickerControllerLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHUIImagePickerControllerLibrary.m; sourceTree = "<group>"; };
@@ -131,20 +109,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		62DE4AF31F9F1CC50086CE06 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		62DE4AFE1F9F1CC50086CE06 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		62DE4B141F9F1CF10086CE06 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -166,8 +130,6 @@
 			isa = PBXGroup;
 			children = (
 				62DE4ADF1F9F1CC50086CE06 /* SHUIImagePickerController */,
-				62DE4AF91F9F1CC50086CE06 /* SHUIImagePickerControllerTests */,
-				62DE4B041F9F1CC50086CE06 /* SHUIImagePickerControllerUITests */,
 				62DE4B181F9F1CF10086CE06 /* SHUIImagePickerControllerLibrary */,
 				62DE4B9A1FA09D590086CE06 /* SHUIImagePickerControllerLibrarySource */,
 				62DE4ADE1F9F1CC50086CE06 /* Products */,
@@ -178,8 +140,6 @@
 			isa = PBXGroup;
 			children = (
 				62DE4ADD1F9F1CC50086CE06 /* SHUIImagePickerController.app */,
-				62DE4AF61F9F1CC50086CE06 /* SHUIImagePickerControllerTests.xctest */,
-				62DE4B011F9F1CC50086CE06 /* SHUIImagePickerControllerUITests.xctest */,
 				62DE4B171F9F1CF10086CE06 /* libSHUIImagePickerControllerLibrary.a */,
 				62DE4B991FA09D590086CE06 /* SHUIImagePickerControllerLibrarySource.bundle */,
 			);
@@ -212,24 +172,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		62DE4AF91F9F1CC50086CE06 /* SHUIImagePickerControllerTests */ = {
-			isa = PBXGroup;
-			children = (
-				62DE4AFA1F9F1CC50086CE06 /* SHUIImagePickerControllerTests.m */,
-				62DE4AFC1F9F1CC50086CE06 /* Info.plist */,
-			);
-			path = SHUIImagePickerControllerTests;
-			sourceTree = "<group>";
-		};
-		62DE4B041F9F1CC50086CE06 /* SHUIImagePickerControllerUITests */ = {
-			isa = PBXGroup;
-			children = (
-				62DE4B051F9F1CC50086CE06 /* SHUIImagePickerControllerUITests.m */,
-				62DE4B071F9F1CC50086CE06 /* Info.plist */,
-			);
-			path = SHUIImagePickerControllerUITests;
-			sourceTree = "<group>";
-		};
 		62DE4B181F9F1CF10086CE06 /* SHUIImagePickerControllerLibrary */ = {
 			isa = PBXGroup;
 			children = (
@@ -237,7 +179,6 @@
 				62DE4B311F9F25C40086CE06 /* Controller */,
 				62DE4B201F9F1D7A0086CE06 /* Interface */,
 				62DE4B231F9F1D7A0086CE06 /* Model */,
-				62DE4B241F9F1D7A0086CE06 /* UIView */,
 				62DE4B251F9F1D7A0086CE06 /* UIViewController */,
 			);
 			path = SHUIImagePickerControllerLibrary;
@@ -260,13 +201,6 @@
 				62DE4B3A1F9F29BC0086CE06 /* SHAssetModel.m */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		62DE4B241F9F1D7A0086CE06 /* UIView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UIView;
 			sourceTree = "<group>";
 		};
 		62DE4B251F9F1D7A0086CE06 /* UIViewController */ = {
@@ -330,15 +264,6 @@
 			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
-
-		62DE4C621FA322F30086CE06 /* BigPictureBrowsing */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = BigPictureBrowsing;
-			sourceTree = "<group>";
-		};
-
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -360,42 +285,6 @@
 			productName = SHUIImagePickerController;
 			productReference = 62DE4ADD1F9F1CC50086CE06 /* SHUIImagePickerController.app */;
 			productType = "com.apple.product-type.application";
-		};
-		62DE4AF51F9F1CC50086CE06 /* SHUIImagePickerControllerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 62DE4B0D1F9F1CC50086CE06 /* Build configuration list for PBXNativeTarget "SHUIImagePickerControllerTests" */;
-			buildPhases = (
-				62DE4AF21F9F1CC50086CE06 /* Sources */,
-				62DE4AF31F9F1CC50086CE06 /* Frameworks */,
-				62DE4AF41F9F1CC50086CE06 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				62DE4AF81F9F1CC50086CE06 /* PBXTargetDependency */,
-			);
-			name = SHUIImagePickerControllerTests;
-			productName = SHUIImagePickerControllerTests;
-			productReference = 62DE4AF61F9F1CC50086CE06 /* SHUIImagePickerControllerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		62DE4B001F9F1CC50086CE06 /* SHUIImagePickerControllerUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 62DE4B101F9F1CC50086CE06 /* Build configuration list for PBXNativeTarget "SHUIImagePickerControllerUITests" */;
-			buildPhases = (
-				62DE4AFD1F9F1CC50086CE06 /* Sources */,
-				62DE4AFE1F9F1CC50086CE06 /* Frameworks */,
-				62DE4AFF1F9F1CC50086CE06 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				62DE4B031F9F1CC50086CE06 /* PBXTargetDependency */,
-			);
-			name = SHUIImagePickerControllerUITests;
-			productName = SHUIImagePickerControllerUITests;
-			productReference = 62DE4B011F9F1CC50086CE06 /* SHUIImagePickerControllerUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		62DE4B161F9F1CF10086CE06 /* SHUIImagePickerControllerLibrary */ = {
 			isa = PBXNativeTarget;
@@ -445,18 +334,6 @@
 						DevelopmentTeam = TDT34TC7ER;
 						ProvisioningStyle = Automatic;
 					};
-					62DE4AF51F9F1CC50086CE06 = {
-						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = TDT34TC7ER;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 62DE4ADC1F9F1CC50086CE06;
-					};
-					62DE4B001F9F1CC50086CE06 = {
-						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = TDT34TC7ER;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 62DE4ADC1F9F1CC50086CE06;
-					};
 					62DE4B161F9F1CF10086CE06 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = TDT34TC7ER;
@@ -483,8 +360,6 @@
 			projectRoot = "";
 			targets = (
 				62DE4ADC1F9F1CC50086CE06 /* SHUIImagePickerController */,
-				62DE4AF51F9F1CC50086CE06 /* SHUIImagePickerControllerTests */,
-				62DE4B001F9F1CC50086CE06 /* SHUIImagePickerControllerUITests */,
 				62DE4B161F9F1CF10086CE06 /* SHUIImagePickerControllerLibrary */,
 				62DE4B981FA09D590086CE06 /* SHUIImagePickerControllerLibrarySource */,
 			);
@@ -500,20 +375,6 @@
 				62DE4AF01F9F1CC50086CE06 /* LaunchScreen.storyboard in Resources */,
 				62DE4AED1F9F1CC50086CE06 /* Assets.xcassets in Resources */,
 				62DE4AEB1F9F1CC50086CE06 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		62DE4AF41F9F1CC50086CE06 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		62DE4AFF1F9F1CC50086CE06 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,22 +408,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		62DE4AF21F9F1CC50086CE06 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				62DE4AFB1F9F1CC50086CE06 /* SHUIImagePickerControllerTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		62DE4AFD1F9F1CC50086CE06 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				62DE4B061F9F1CC50086CE06 /* SHUIImagePickerControllerUITests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		62DE4B131F9F1CF10086CE06 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -589,16 +434,6 @@
 			isa = PBXTargetDependency;
 			target = 62DE4B981FA09D590086CE06 /* SHUIImagePickerControllerLibrarySource */;
 			targetProxy = 62282C751FA0B5C4007E3ABE /* PBXContainerItemProxy */;
-		};
-		62DE4AF81F9F1CC50086CE06 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 62DE4ADC1F9F1CC50086CE06 /* SHUIImagePickerController */;
-			targetProxy = 62DE4AF71F9F1CC50086CE06 /* PBXContainerItemProxy */;
-		};
-		62DE4B031F9F1CC50086CE06 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 62DE4ADC1F9F1CC50086CE06 /* SHUIImagePickerController */;
-			targetProxy = 62DE4B021F9F1CC50086CE06 /* PBXContainerItemProxy */;
 		};
 		62DE4B941FA0999B0086CE06 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -745,56 +580,6 @@
 			};
 			name = Release;
 		};
-		62DE4B0E1F9F1CC50086CE06 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = TDT34TC7ER;
-				INFOPLIST_FILE = SHUIImagePickerControllerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.smallHeat.SHUIImagePickerControllerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SHUIImagePickerController.app/SHUIImagePickerController";
-			};
-			name = Debug;
-		};
-		62DE4B0F1F9F1CC50086CE06 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = TDT34TC7ER;
-				INFOPLIST_FILE = SHUIImagePickerControllerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.smallHeat.SHUIImagePickerControllerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SHUIImagePickerController.app/SHUIImagePickerController";
-			};
-			name = Release;
-		};
-		62DE4B111F9F1CC50086CE06 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = TDT34TC7ER;
-				INFOPLIST_FILE = SHUIImagePickerControllerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.smallHeat.SHUIImagePickerControllerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = SHUIImagePickerController;
-			};
-			name = Debug;
-		};
-		62DE4B121F9F1CC50086CE06 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = TDT34TC7ER;
-				INFOPLIST_FILE = SHUIImagePickerControllerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.smallHeat.SHUIImagePickerControllerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = SHUIImagePickerController;
-			};
-			name = Release;
-		};
 		62DE4B1E1F9F1CF20086CE06 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -875,24 +660,6 @@
 			buildConfigurations = (
 				62DE4B0B1F9F1CC50086CE06 /* Debug */,
 				62DE4B0C1F9F1CC50086CE06 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		62DE4B0D1F9F1CC50086CE06 /* Build configuration list for PBXNativeTarget "SHUIImagePickerControllerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				62DE4B0E1F9F1CC50086CE06 /* Debug */,
-				62DE4B0F1F9F1CC50086CE06 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		62DE4B101F9F1CC50086CE06 /* Build configuration list for PBXNativeTarget "SHUIImagePickerControllerUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				62DE4B111F9F1CC50086CE06 /* Debug */,
-				62DE4B121F9F1CC50086CE06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

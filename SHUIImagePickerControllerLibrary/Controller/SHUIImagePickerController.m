@@ -10,12 +10,16 @@
 #import "SHAssetModel.h"
 
 
+
+
 @interface SHUIImagePickerController ()
 //当前相册中的所有图片
 @property (nonatomic,strong) NSMutableArray<SHAssetModel *> * shAssetModelArray;
 
 //相机模型
 @property (nonatomic,strong) SHAssetModel * cameraModel;
+
+
 @end
 
 
@@ -47,68 +51,95 @@
     allPhotosOptions.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:NO]]; //按照时间倒叙排列
     PHFetchResult *allPhotosResult = [PHAsset fetchAssetsWithMediaType:PHAssetMediaTypeImage options:allPhotosOptions];
     
-    [allPhotosResult enumerateObjectsUsingBlock:^(PHAsset *asset, NSUInteger idx, BOOL *stop) {
+    if (allPhotosResult.count > 0) {
+     
+        [allPhotosResult enumerateObjectsUsingBlock:^(PHAsset *asset, NSUInteger idx, BOOL *stop) {
+
+            SHAssetModel * mAsset = [[SHAssetModel alloc] initWithAsset:asset];
+            [weakSelf.shAssetModelArray addObject:mAsset];
+            if (idx ==  allPhotosResult.count - 1) {
+                
+                result(weakSelf.shAssetModelArray);
+                [weakSelf.shAssetModelArray removeAllObjects];
+            }
+        }];
+    }
+    else{
         
-        SHAssetModel * mAsset = [[SHAssetModel alloc] initWithAsset:asset];
-        [weakSelf.shAssetModelArray addObject:mAsset];
-        if (allPhotosResult.count == weakSelf.shAssetModelArray.count) {
-            
-            result(weakSelf.shAssetModelArray);
-            [weakSelf.shAssetModelArray removeAllObjects];
-        }
-    }];
-    
+        result(weakSelf.shAssetModelArray);
+        [weakSelf.shAssetModelArray removeAllObjects];
+    }
 }
 
 //判断有无使用相册权限
--(BOOL)getAlbumAuthority{
+-(AlbumState)getAlbumAuthority{
 
     PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
     if (status == PHAuthorizationStatusAuthorized) {
         
         //有访问相册权限
-        return YES;
+        return AlbumStatusAuthorized;
+    }
+    else if (status == PHAuthorizationStatusNotDetermined){
+        
+        [self requestAuthorizationStatus_AfteriOS8];
+        return AlbumStatusNotDetermined;
+    }
+    else if (status == PHAuthorizationStatusRestricted){
+        
+        return AlbumStatusRestricted;
     }
     else{
         
-        //请求相册权限
-        [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status){
-            dispatch_async(dispatch_get_main_queue(), ^{
-                switch (status) {
-                    case PHAuthorizationStatusAuthorized:
-                    {
-                        
-                        break;
-                    }
-                    default:
-                    {
-                        break;
-                    }
-                }
-            });
-        }];
-        return NO;
+        return AlbumStatusDenied;
     }
 }
+
 //判断有无照相机使用权限
--(BOOL)getCameraAuthority{
-    
+-(CameraState)getCameraAuthority{
+
     NSString *mediaType = AVMediaTypeVideo;//读取媒体类型
     AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:mediaType];//读取设备授权状态
     if(authStatus == AVAuthorizationStatusAuthorized){
         
-        return YES;
+        return CameraStatusAuthorized;
     }
-    else{
+    else if (authStatus == AVAuthorizationStatusNotDetermined){
         
-        //请求相机权限
         [AVCaptureDevice requestAccessForMediaType:mediaType completionHandler:^(BOOL granted) {
             
         }];
-        return NO;
+        return CameraStatusNotDetermined;
+    }
+    else if (authStatus == AVAuthorizationStatusRestricted){
+        
+        return CameraStatusRestricted;
+    }
+    else{
+    
+        return CameraStatusDenied;
     }
 }
 
+//请求相册权限
+- (void)requestAuthorizationStatus_AfteriOS8
+{
+    [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status){
+        dispatch_async(dispatch_get_main_queue(), ^{
+            switch (status) {
+                case PHAuthorizationStatusAuthorized:
+                {
+                    
+                    break;
+                }
+                default:
+                {
+                    break;
+                }
+            }
+        });
+    }];
+}
 
 //清理内存(本模块生命周期结束时调用)
 -(void)clearMemary{

@@ -6,6 +6,8 @@
 	<array>
 		<string>zh_CN</string>
 	</array>
+	<key>CFBundleDisplayName</key>
+	<string>相册浏览器</string>
 	<key>NSCameraUsageDescription</key>
 	<string>亲，使用您的相机可以吗?</string>
 	<key>NSPhotoLibraryUsageDescription</key>

@@ -76,19 +76,33 @@
 
     if (indexPath.row == 0) {
         
-        if ([[SHUIImagePickerController sharedManager] getCameraAuthority]) {
-         
-            //去拍照
-            UIImagePickerControllerSourceType sourceType=UIImagePickerControllerSourceTypeCamera;
-            if(![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
-            {
-                sourceType=UIImagePickerControllerSourceTypePhotoLibrary;
-            }
-            UIImagePickerController *picker=[[UIImagePickerController alloc]init];
-            picker.delegate=self;
-            picker.sourceType=sourceType;
-            picker.allowsEditing= NO;
-            [self  presentViewController:picker animated:YES completion:nil];
+        //权限判断
+        if ([[SHUIImagePickerController sharedManager] getCameraAuthority] == CameraStatusAuthorized) {
+            
+                //去拍照
+                UIImagePickerControllerSourceType sourceType=UIImagePickerControllerSourceTypeCamera;
+                if(![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+                {
+                    sourceType=UIImagePickerControllerSourceTypePhotoLibrary;
+                }
+                UIImagePickerController *picker=[[UIImagePickerController alloc]init];
+                picker.delegate=self;
+                picker.sourceType=sourceType;
+                picker.allowsEditing= NO;
+                [self  presentViewController:picker animated:YES completion:nil];
+            
+        }
+        else if([[SHUIImagePickerController sharedManager] getCameraAuthority] == CameraStatusRestricted || [[SHUIImagePickerController sharedManager] getCameraAuthority] == CameraStatusDenied){
+            
+            NSDictionary * inforDic = [NSBundle mainBundle].infoDictionary;
+            NSString * message = [[NSString alloc] initWithFormat:@"请进入iPhone的“设置-隐私-相机”选项，允许%@访问您的手机相册。",inforDic[@"CFBundleDisplayName"]];
+            //无权限
+            UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"提示" message:message preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction * sureAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                
+            }];
+            [alert addAction:sureAction];
+            [self presentViewController:alert animated:YES completion:nil];
         }
     }
 }
@@ -177,6 +191,10 @@
                         
                         wkself.block(selectedImageArray);
                     }
+                    else if (wkself.delegate){
+                        
+                        [self.delegate finishSelectedWithArray:selectedImageArray];
+                    }
                 }];
             }
             else{
@@ -208,11 +226,14 @@
 -(void)finishBtnClicked:(UIButton *)finishBtn{
 
     NSMutableArray * selectedImageArray = [[NSMutableArray alloc] initWithArray:self.selectedModelArray];
-    
+    [self.selectedModelArray removeAllObjects];
     [self backBtnClicked:nil];
     if (self.block) {
         
         self.block(selectedImageArray);
+    }else if (self.delegate){
+        
+        [self.delegate finishSelectedWithArray:selectedImageArray];
     }
 }
 
